@@ -1,0 +1,254 @@
+/* Reset & Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.google-font {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #fffdf7;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff0e0;
+  padding: 1rem 2rem;
+  border-bottom: 2px solid #ffd6b2;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ff6600;
+}
+
+.logo span {
+  color: #333;
+}
+
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  position: relative;
+}
+
+nav a.active,
+nav a:hover {
+  color: #ff6600;
+}
+
+.cart-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 2rem;
+  background: #fff4e6;
+}
+
+.hero .text {
+  max-width: 50%;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero h1 span {
+  color: #ff6600;
+}
+
+.hero p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.explore-btn {
+  padding: 0.75rem 1.5rem;
+  background: #ff6600;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.hero .image img {
+  width: 350px;
+}
+
+/* Food Cards */
+.food-cards {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.food-cards .card {
+  padding: 1rem 2rem;
+  border: 2px solid #ffcc99;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.food-cards .card.active,
+.food-cards .card:hover {
+  background: #ff6600;
+  color: white;
+}
+
+/* Section Titles */
+section h1 {
+  text-align: center;
+  margin: 2rem 0 1rem;
+  font-size: 2rem;
+}
+
+section h1 span {
+  color: #ff6600;
+}
+
+/* About Section */
+.about,
+.menu,
+.restaurants,
+.dishes {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Menu Grid */
+.menu-grid,
+.restaurant-grid,
+.dish-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+/* Card Styles */
+.menu-card,
+.restaurant-card,
+.dish-card {
+  background: #fff;
+  padding: 1rem;
+  border: 1px solid #ffe0cc;
+  border-radius: 10px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.menu-card:hover,
+.restaurant-card:hover,
+.dish-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+img {
+  border-radius: 16px;
+  object-fit: cover;
+  display: block;
+}
+
+.menu-card img,
+.restaurant-card img,
+.dish-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 16px; /* tăng bo góc đều và đẹp */
+  margin-bottom: 0.75rem;
+}
+
+.menu-card h3,
+.restaurant-card h3,
+.dish-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #ff6600;
+}
+
+.menu-card p,
+.restaurant-card p,
+.dish-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.menu-card span,
+.dish-card span {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Footer */
+footer {
+  background: #fff0e0;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
+}
+
+footer .socials a {
+  text-decoration: none;
+  margin: 0 0.75rem;
+  color: #333;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+footer .socials a:hover {
+  color: #ff6600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero .text {
+    max-width: 100%;
+  }
+
+  .hero .image img {
+    margin-top: 2rem;
+    width: 250px;
+  }
+
+  nav ul {
+    gap: 1rem;
+  }
+}
